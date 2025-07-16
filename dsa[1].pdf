@@ -1,1 +1,1 @@
-https://docs.google.com/viewer?url=${dsa[1].pdf}
+    <embed src="./your_pdf_file.pdf" type="dsa[1].pdf" width="100%" height="600px">
