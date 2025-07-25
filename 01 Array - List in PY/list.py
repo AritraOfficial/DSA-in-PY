@@ -1,8 +1,8 @@
-# ````````````````````````````````````````````` || LIST  || `````````````````````````````````````````````
+''' ````````````````````````````````````````````` || LIST  || ````````````````````````````````````````````` '''
 
 
 # =====================================================================================================================================
-#                           Define a Demo List 
+'''                                                Define a Demo List                                                           '''
 
 # List_Demo = []   #<----------- Empty List
 # List_demo = [1, 233.5, 'Aritra', True, "AriX"]     #<--------- Hold multiple types elements at once. 
@@ -22,7 +22,7 @@
 
 
 # =====================================================================================================================================
-#                 Using   'list()'  constructor  method 
+'''                                             Using   'list()'  constructor  method                                            ''' 
 
 # Convert an  iterable(like - DICT, FLOAT, TUPLE, STR) into list. 
 # b = list((1,2,3,4.9, "AriX", True))
@@ -31,7 +31,7 @@
 
 
 # =====================================================================================================================================
-#       2D List >> Demonstrate LIST ARE MUTABLE | Shallow Copy
+'''                                       2D List >> Demonstrate LIST ARE MUTABLE  | Shallow Copy                                  '''
 
 # a = [[1, 2, 3],
 #      [4, 5, 6]]
@@ -43,7 +43,7 @@
 
 
 # =====================================================================================================================================
-#                       Modifying Elements in a List
+'''                                             Modifying Elements in a List                                                    '''
 
 # motorcycles = ['honda', 'yamaha', 'suzuki']
 # motorcycles[0] = 'ducati' 
@@ -52,7 +52,7 @@
 
 
 # =====================================================================================================================================
-#                        Adding Elements to a List
+'''                                                  Adding Elements to a List                                                  '''
 # a = []   #<--- empty list 
 # ___________________________________  Using 'append' method  _____________________________________
 # a.append('Aritra')
@@ -65,7 +65,7 @@
 
 
 # ======================================================================================================================================
-#                       Removing Elements from List
+'''                                                    Removing Elements from List                                                  '''
 # a = [100, 12, 90, 40, 7000, 'false']
 # print('Before remove array > ', a)
 # ___________________________________  Using 'remove()' method  _____________________________________
@@ -81,4 +81,128 @@
 # ___________________________________  Using 'del' method  _____________________________________
 # del a[0]
 # print('After using del >', a)
-# =======================================================================================================================================
+# ======================================================================================================================================
+
+
+# ======================================================================================================================================
+'''                                                      Organizing a List                                                          '''
+# a = ['xyz', 'ari', 'super', 'mukherjee', '40']
+# print('The Original array > ', a)
+# ___________________________________  Using 'sort()' method  _____________________________________
+#a.sort()
+# print('After sort array >', a)
+# print('The Original array > ', a) #<-- give same as sort array because - Sorting a List Permanently with the sort() Method
+# ___________________________________  Using 'sorted()' method  _____________________________________
+# print('After sort array >', sorted(a))
+# print('The Original array > ', a) #<-- give same as sort array because - Sorting a List Temporarily with the sorted() Function
+# ======================================================================================================================================
+
+
+# ======================================================================================================================================
+'''                                                     Printing a List in Reverse Order                                            '''
+# a = ['xyz', 'ari', 'super', 'mukherjee', '40']
+# print('The Original array > ', a)
+# a.reverse()
+# print('After reverse array > ', a)
+# ---------------------------------------------------------------------------
+'''                         Finding The Length of List                  '''
+# print('Length of list  >>', len(a))
+# ======================================================================================================================================
+
+
+
+# ======================================================================================================================================
+'''                                           Looping through an entire list                                                        '''
+# a = ['xyz', 'ari', 'super', 'mukherjee', '40']
+# for i in a:
+#     print(i)
+# ----------------------------------------------------------------------
+# magicians = ['alice', 'david', 'carolina']
+# for magician in magicians:
+#  print(f"{magician.title()}, that was a great trick!")
+#  print(f"I can't wait to see your next trick, {magician.title()}.\n")
+# print("Thank you, everyone. That was a great magic show!")
+# ======================================================================================================================================
+
+
+
+# ======================================================================================================================================
+'''                                          Making Numerical Lists
+
+                                           Using the range () Function                                                              '''
+# for value in range(1,5):
+#     print(value)
+# --------------------------------------------------------------------------------------------------------------
+'''                                      Using range() to Make a List of Numbers                            ''' 
+# number = list(range(1,10))
+# print(number)
+# --------------------------------------------------------------------------------------------------------------
+#                                          Find the Even and Odd by using range()
+# even_number = list(range(2,15,2))
+# print("Even Numbers> ", even_number)
+# odd_num = list(range(3,20,3))
+# print("Odd Number > ", odd_num)
+# the range() function starts with the value 2 and the adds 2 to that value. It adds 2 repeatedly until it reaches or passes the end value 15.
+# --------------------------------------------------------------------------------------------------------------
+'''                                     Find the square in list range()                                      '''
+# square = []
+# for value in range(1,13):
+#     s = value ** 2
+#     # square.insert(0, s)  #<--- same but it returns the values in reverse 
+#     square.append(s)
+# print(square)
+# ````` Enhanced Code - List Comprehensions ```````
+# The approach described earlier for generating the list squares consisted of using three or four lines of code.
+# squares = [value**2 for value in range(1, 11)]
+# print(squares)
+# ======================================================================================================================================
+
+
+
+# ======================================================================================================================================
+'''                                             Simple Statistics with a List of Numbers                                            '''
+# num = list(range(1,11))
+# print(min(num))
+# print(max(num))
+# print(sum(num))
+# number = 1
+# for i in num:
+#     number *= i
+# print(number)
+# # ````` Enhanced Code ```````
+# import math 
+# print(math.prod(num))
+# ======================================================================================================================================
+
+
+
+# ======================================================================================================================================
+'''                                                         Slicing a List                                                          '''
+# players = ['charles', 'martina', 'michael', 'florence', 'eli']
+# print(players[3:])
+# --------------------------------------------------------------------------------------------------------------
+'''                                             Looping Through Slicing                                    '''
+# for i in players[:3]:
+#     print(i.title())
+# --------------------------------------------------------------------------------------------------------------
+'''                                             Copying a List                                             '''
+# a = players[:]      # create a same copy list as 
+# print(a)
+# ======================================================================================================================================
+
+
+
+# ======================================================================================================================================
+'''                                                    Nested Lists in Python                                                  '''
+# import numpy as np 
+# m = np.array([[1,2,3],                      
+#               [4,5,6],
+#               [9,10,12]])
+# print(m[1][2])
+# Indexing Looks like --- 
+#      0  1  2
+#     -- -- --
+#   0| 1  2  3
+#   1| 4  5  6 
+#   2| 7  8  9     #print(m[1][2])  <---- o/p=6
+# ======================================================================================================================================
